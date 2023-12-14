@@ -74,8 +74,8 @@ a{
 ReactDOM.render(
     <RecoilRoot>
       <ThemeProvider theme={darkTheme}>
-      <App />
-      <GlobalStyle />
+          <App /> 
+        <GlobalStyle />
       </ThemeProvider>
     </RecoilRoot>,
     document.getElementById('root')

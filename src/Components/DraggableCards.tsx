@@ -1,3 +1,4 @@
+import React from "react";
 import { Draggable } from "react-beautiful-dnd"
 import styled from "styled-components";
 
@@ -13,6 +14,9 @@ interface dragCradI {
 }
 
 function DraggableCards({toDo, index}: dragCradI) {
+
+  console.log(toDo);
+
   return (
     <Draggable key={toDo} draggableId={toDo} index={index}>{(magic) => (
       <Card ref={magic.innerRef} 
@@ -25,4 +29,4 @@ function DraggableCards({toDo, index}: dragCradI) {
   )
 }
 
-export default DraggableCards
+export default React.memo(DraggableCards);
